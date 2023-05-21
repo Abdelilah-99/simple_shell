@@ -34,4 +34,5 @@ char *_strchr(char *str, int c);
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strtok(char *str, char *delim);
 int is_delimiter(char c, char *delim);
+
 #endif

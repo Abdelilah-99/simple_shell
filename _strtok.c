@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * _strtok - do the same what strtok do
+ * _strtok - do the same whsat strtok do
  * @str: string
  * @delim: delimeter
  * Return: returning

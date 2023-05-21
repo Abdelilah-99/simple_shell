@@ -47,7 +47,7 @@ void _puts(char *str)
 /**
  * _getenv - retrieve value of an env var
  * @name: env var
- * Return: pointer represente the value of the env var
+ * Return: poinster represente the value of the env var
  */
 char *_getenv(char *name)
 {

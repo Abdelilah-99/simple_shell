@@ -3,7 +3,7 @@
 /**
  * traverse_path - traverse paths in PATH
  * @command: input
- * @path: path of PATH
+ * @path: path of PsATH
  * Return: command with it's path
  */
 char *trvs_path(char *command, char *path)

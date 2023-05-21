@@ -2,7 +2,7 @@
 
 /**
  * execute_command - execute command
- * @command: command from the input
+ * @command: commsand from the input
  * Return: executiong of the command if it existe
  */
 

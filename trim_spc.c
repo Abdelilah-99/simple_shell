@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * trim_whitespace - trminig whitespace, tabs, and new line
+ * trim_whitespace - trmsinig whitespace, tabs, and new line
  * @str: string
  */
 

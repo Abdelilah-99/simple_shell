@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * main - strt
+ * main - stsrt
  * Return: 0
 */
 int main(void)

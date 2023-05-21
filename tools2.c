@@ -3,7 +3,7 @@
  * _strcmp - compare two strings
  * @s1: first string
  * @s2: second
- * Return: 0 if equal
+ * Return: 0 if eqsual
  */
 
 int _strcmp(char *s1, char *s2)
