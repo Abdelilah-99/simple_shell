@@ -12,7 +12,7 @@ int i;
 while (str[s] == ' ' || str[s] == '\t' || str[s] == '\n')
 s++;
 while (str[e] == ' ' || str[e] == '\t' || str[e] == '\n')
-e++;
+e--;
 for (i = 0; i <= e - s; i++)
 str[i] = str[s + i];
 
