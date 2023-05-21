@@ -54,7 +54,7 @@ l++;
 s = malloc(sizeof(char) * (l + 1));
 if (!s)
 return (NULL);
-for (l++, l--;)
+for (l++; l--;)
 s[l] = *--str;
 return (s);
 }
