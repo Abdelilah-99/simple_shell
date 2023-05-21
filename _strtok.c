@@ -5,38 +5,23 @@
  * @delim: delimeter
  * Return: returning
  */
-char *_strtok(char *str, char *delim)
+char *_strtok(char *str, const char *delim)
 {
-	static char *token;
-	static char *next_token;
-	char *start = NULL;
-	char *end = NULL;
+	static char *token = NULL;
+	char *strt;
 
-	if (str != NULL)
-	{
+	if(str)
 		token = str;
-		next_token = NULL;
-	}
-	if (token == NULL)
+	else if (!token)
 		return (NULL);
-	start = token;
-
-	while (*token != '\0')
-	{
-		if (is_delimiter(*token, delim))
-		{
-			*token = '\0';
-			end = token;
-			token++;
-			break;
-		}
-		token++;
-	}
-	if (end == NULL)
-		end = token;
+	while (*token != '\0' && _strchr(delim, *token) != NULL)
+		++token;
 	if (*token == '\0')
-		token = next_token;
-	else
-		next_token = token;
-	return (start);
+		return (NULL);
+	strt = token;
+	while (*token != '\0' && _strchr(delim, *token) == NULL)
+		++token;
+	if (*token != '\0')
+		*token++ = '\0';
+	return (strt);
 }

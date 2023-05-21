@@ -30,9 +30,9 @@ void run_shell();
 char *trvs_path(char *command, char *path);
 void print_exit(char *arr[]);
 int _atoi(char *s);
-char *_strchr(char *str, int c);
+char *_strchr(const char *str, int c);
 int _strncmp(char *s1, char *s2, size_t n);
-char *_strtok(char *str, char *delim);
+char *_strtok(char *str, const char *delim);
 int is_delimiter(char c, char *delim);
 
 #endif

@@ -66,7 +66,7 @@ char *_strdup(const char *str)
  * @c: integer
  * Return: a pointer to the first occurence of the specified char
  */
-char *_strchr(char *str, int c)
+char *_strchr(const char *str, int c)
 {
 	while (*str != '\0')
 	{
