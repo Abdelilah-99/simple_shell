@@ -6,12 +6,12 @@
  * @path: path of PATH
  * Return: command with it's path
  */
-char* trav_path(char* command, char* path)
+char *trav_path(char *command, char *path)
 {
 struct stat file_stat;
 char command_path[MAX_COMMAND_LENGTH];
-char* path_token;
-char* path_copy = _strdup(path);
+char *path_token;
+char *path_copy = _strdup(path);
 if (path_copy == NULL)
 {
 perror("strdup");
