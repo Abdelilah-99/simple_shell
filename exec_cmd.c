@@ -42,7 +42,7 @@ perror("fork"), exit(EXIT_FAILURE);
 else if (pid == 0)
 {
 execve(command_path, arguments, NULL);
-perror("execve", exit(EXIT_FAILURE);
+perror("execve"), exit(EXIT_FAILURE);
 }
 else
 wait(NULL);
