@@ -7,10 +7,10 @@
  */
 char *_strtok(char *str, const char *delim)
 {
-	static char *token = NULL;
+	static char *token;
 	char *strt;
 
-	if(str)
+	if (str)
 		token = str;
 	else if (!token)
 		return (NULL);
