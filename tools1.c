@@ -51,9 +51,10 @@ i++;
 char *_getenv(char *name)
 {
 int i = 0;
+char *env_name = NULL;
 for (; environ[i]; i++)
 {
-char *env_name = environ[i];
+env_name = environ[i];
 if (_strncmp(env_name, name, _strlen(name)) == 0)
 {
 return (_strchr(env_name, '=') + 1);
