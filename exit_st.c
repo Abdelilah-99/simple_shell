@@ -32,7 +32,7 @@ int _atoi(char *s)
 	return (r);
 }
 /**
- * printf_exit - exit function
+ * print_exit - exit function
  * @arr: array of input
  */
 

@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * traverse_path - traverse paths in PATH
+ * trvs_path - traverse paths in PATH
  * @command: input
  * @path: path of PsATH
  * Return: command with it's path
@@ -34,15 +34,21 @@ char *trvs_path(char *command, char *path)
 	free(path_copy);
 	return (NULL);
 }
+/**
+ * is_delimiter - delometer
+ * @c: char
+ * @delim: delimeter
+ * Return: return 0
+*/
 int is_delimiter(char c, char *delim)
 {
 	while (*delim != '\0')
 	{
 		if (c == *delim)
 		{
-			return 1;
+			return (1);
 		}
 		delim++;
 	}
-	return 0;
+	return (0);
 }
