@@ -1,35 +1,48 @@
 #include "shell.h"
 
 /**
- * trav_path - traverse paths in PATH
+ * traverse_path - traverse paths in PATH
  * @command: input
  * @path: path of PATH
  * Return: command with it's path
  */
-char *trav_path(char *command, char *path)
+char *trvs_path(char *command, char *path)
 {
-struct stat file_stat;
-char command_path[MAX_COMMAND_LENGTH];
-char *path_token;
-char *path_copy = _strdup(path);
-if (path_copy == NULL)
-{
-perror("strdup");
-exit(EXIT_FAILURE);
+	struct stat file_stat;
+	char command_path[MAX_COMMAND_LENGTH];
+	char *path_token;
+	char *path_copy = _strdup(path);
+
+	if (path_copy == NULL)
+	{
+		perror("strdup");
+		exit(EXIT_FAILURE);
+	}
+	path_token = _strtok(path_copy, ":");
+	while (path_token != NULL)
+	{
+		_strcpy(command_path, path_token);
+		_strcat(command_path, "/");
+		_strcat(command_path, command);
+		if (stat(command_path, &file_stat) == 0 && file_stat.st_mode & S_IXUSR)
+		{
+			free(path_copy);
+			return (_strdup(command_path));
+		}
+		path_token = _strtok(NULL, ":");
+	}
+	free(path_copy);
+	return (NULL);
 }
-path_token = _strtok(path_copy, ":");
-while (path_token != NULL)
+int is_delimiter(char c, char *delim)
 {
-_strcpy(command_path, path_token);
-_strcat(command_path, "/");
-_strcat(command_path, command);
-if (stat(command_path, &file_stat) == 0 && file_stat.st_mode & S_IXUSR)
-{
-free(path_copy);
-return (_strdup(command_path));
-}
-path_token = _strtok(NULL, ":");
-}
-free(path_copy);
-return (NULL);
+	while (*delim != '\0')
+	{
+		if (c == *delim)
+		{
+			return 1;
+		}
+		delim++;
+	}
+	return 0;
 }
