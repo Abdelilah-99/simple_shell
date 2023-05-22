@@ -13,10 +13,7 @@ void run_shell(void)
 	{
 		command = malloc(32 * sizeof(char));
 		if (command == NULL)
-		{
-			free(command);
 			break;
-		}
 		if (isatty(STDIN_FILENO))
 			_puts("$ ");
 		ch_read = getline(&command, &command_length, stdin);
@@ -24,7 +21,6 @@ void run_shell(void)
 		{
 			if (ch_read == -1)
 				_puts("\n");
-			free(command);
 			break;
 		}
 		trim_whitespace(command);
@@ -32,4 +28,5 @@ void run_shell(void)
 			continue;
 		execute_command(command);
 	}
+		free(command);
 }
