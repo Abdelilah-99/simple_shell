@@ -16,7 +16,7 @@ int _putchar(char c)
  * @d: dest
  * Return: a pointer to dest
  */
-char *_strcpy(char *d, char *s)
+char *_strcpy(char *d, const char *s)
 {
 	int i = 0;
 

@@ -13,6 +13,7 @@ char *trvs_path(char *command, char *path)
 	char *path_token;
 	char *path_copy = _strdup(path);
 
+	command_path[0] = '\0';
 	if (path_copy == NULL)
 	{
 		perror("strdup");
@@ -33,22 +34,4 @@ char *trvs_path(char *command, char *path)
 	}
 	free(path_copy);
 	return (NULL);
-}
-/**
- * is_delimiter - delometer
- * @c: char
- * @delim: delimeter
- * Return: return 0
-*/
-int is_delimiter(char c, char *delim)
-{
-	while (*delim != '\0')
-	{
-		if (c == *delim)
-		{
-			return (1);
-		}
-		delim++;
-	}
-	return (0);
 }

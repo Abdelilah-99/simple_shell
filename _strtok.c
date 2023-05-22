@@ -14,12 +14,12 @@ char *_strtok(char *str, const char *delim)
 		token = str;
 	else if (!token)
 		return (NULL);
-	while (*token != '\0' && _strchr(delim, *token) != NULL)
+	for (; *token != '\0' && _strchr(delim, *token) != NULL;)
 		++token;
 	if (*token == '\0')
 		return (NULL);
 	strt = token;
-	while (*token != '\0' && _strchr(delim, *token) == NULL)
+	for (; *token != '\0' && _strchr(delim, *token) == NULL;)
 		++token;
 	if (*token != '\0')
 		*token++ = '\0';

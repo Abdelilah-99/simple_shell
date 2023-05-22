@@ -11,6 +11,12 @@ void run_shell(void)
 
 	while (1)
 	{
+		command = malloc(32 * sizeof(char));
+		if (command == NULL)
+		{
+			free(command);
+			break;
+		}
 		if (isatty(STDIN_FILENO))
 			_puts("$ ");
 		ch_read = getline(&command, &command_length, stdin);
