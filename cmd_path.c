@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * find_command_path - find command's path
+ * find_command_path - find path of command
  * @command: inpsut
  * @path: path
  * Return: command in a path
