@@ -13,7 +13,6 @@ void execute_command(char *command)
 	pid_t pid;
 
 	token = _strtok(command, " ");
-
 	if (_strcmp(command, "env") == 0)
 	{
 		print_environment();
@@ -48,4 +47,5 @@ void execute_command(char *command)
 	}
 	else
 		wait(NULL);
+	free(command_path);
 }
