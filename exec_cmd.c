@@ -42,7 +42,7 @@ void execute_command(char *command)
 		perror("fork"), exit(EXIT_FAILURE);
 	else if (pid == 0)
 	{
-		execve(command_path, arguments, NULL);
+		execve(command_path, arguments, environ);
 		perror("execve"), exit(EXIT_FAILURE);
 	}
 	else
