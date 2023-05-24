@@ -20,7 +20,6 @@ void run_shell(void)
 		if (ch_read <= 0)
 		{
 			if (ch_read == -1)
-				_puts("\n");
 			break;
 		}
 		trim_whitespace(command);
