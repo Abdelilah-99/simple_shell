@@ -33,14 +33,9 @@ int _atoi(char *s)
 }
 /**
  * print_exit - exit function
- * @arr: array of input
  */
 
-void print_exit(char *arr[])
+void print_exit(void)
 {
-	int i = 0;
-
-	if (arr[1] != NULL)
-		i = _atoi(arr[1]);
-	exit(i);
+	exit(EXIT_SUCCESS);
 }

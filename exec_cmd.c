@@ -26,8 +26,8 @@ void execute_command(char *command)
 	arguments[i] = NULL;
 	if (_strcmp(command, "exit") == 0)
 	{
-		print_exit(arguments);
-		free(command_path);
+		free(command);
+		print_exit();
 		return;
 	}
 	command_path = find_command_path(arguments[0], _getenv("PATH"));

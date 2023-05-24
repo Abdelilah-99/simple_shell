@@ -28,7 +28,7 @@ void execute_command(char *command);
 char *find_command_path(char *command, char *path);
 void run_shell(void);
 char *trvs_path(char *command, char *path);
-void print_exit(char *arr[]);
+void print_exit(void);
 int _atoi(char *s);
 char *_strchr(const char *str, int c);
 int _strncmp(char *s1, char *s2, size_t n);
