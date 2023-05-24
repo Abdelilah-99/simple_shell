@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * print_exit - exit function
+ * print_exit - exit function with suc
  */
 
 void print_exit(void)
