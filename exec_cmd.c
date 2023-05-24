@@ -8,11 +8,11 @@
 
 void execute_command(char *command)
 {
-	char *arguments[MAX_ARGUMENTS], *token, *command_path;
+	char *arguments[MAX_ARGUMENTS], *token, *command_path = NULL;
 	int i = 0;
 	pid_t pid;
 
-	token = _strtok(command, " ");
+	token = strtok(command, " ");
 	if (_strcmp(command, "env") == 0)
 	{
 		print_environment();
@@ -21,19 +21,19 @@ void execute_command(char *command)
 	for (; token != NULL && i < MAX_ARGUMENTS - 1; i++)
 	{
 		arguments[i] = token;
-		token = _strtok(NULL, " ");
+		token = strtok(NULL, " ");
 	}
 	arguments[i] = NULL;
 	if (_strcmp(command, "exit") == 0)
 	{
 		print_exit(arguments);
+		free(command_path);
 		return;
 	}
 	command_path = find_command_path(arguments[0], _getenv("PATH"));
 	if (command_path == NULL)
 	{
-		_puts("Error: Command not found or not executable: ");
-		_puts(arguments[0]);
+		_puts("Error: Command not found or not executable");
 		_puts("\n");
 		return;
 	}

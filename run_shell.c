@@ -10,12 +10,9 @@ void run_shell(void)
 	ssize_t ch_read;
 	int is_inter = isatty(STDIN_FILENO);
 
-	while (true)
+	while (1)
 	{
 		free(command);
-		command = malloc(32 * sizeof(char));
-		if (command == NULL)
-			break;
 		if (is_inter)
 			_puts("$ ");
 		ch_read = getline(&command, &command_length, stdin);
