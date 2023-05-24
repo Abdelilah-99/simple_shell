@@ -4,5 +4,5 @@
  */
 void print_exit(void)
 {
-	exit(EXIT_SUCCESS);
+	exit(0);
 }
