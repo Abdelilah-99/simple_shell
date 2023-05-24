@@ -24,7 +24,7 @@ void run_shell(void)
 			else
 			{
 				perror("getline");
-				exit(EXIT_SUCCESS);
+				exit(EXIT_FAILURE);
 			}
 		}
 		trim_whitespace(command);
