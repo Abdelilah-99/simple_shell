@@ -12,7 +12,7 @@ void execute_command(char *command)
 	int i = 0;
 	pid_t pid;
 
-	token = _strtok(command, " ");
+	token = strtok(command, " ");
 	if (_strcmp(command, "env") == 0)
 	{
 		print_environment();
@@ -21,7 +21,7 @@ void execute_command(char *command)
 	for (; token != NULL && i < MAX_ARGUMENTS - 1; i++)
 	{
 		arguments[i] = token;
-		token = _strtok(NULL, " ");
+		token = strtok(NULL, " ");
 	}
 	arguments[i] = NULL;
 	if (_strcmp(command, "exit") == 0)

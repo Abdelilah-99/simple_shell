@@ -19,7 +19,7 @@ char *trvs_path(char *command, char *path)
 		perror("strdup");
 		exit(EXIT_FAILURE);
 	}
-	path_token = _strtok(path_copy, ":");
+	path_token = strtok(path_copy, ":");
 	while (path_token != NULL)
 	{
 		_strcpy(command_path, path_token);
@@ -30,7 +30,7 @@ char *trvs_path(char *command, char *path)
 			free(path_copy);
 			return (_strdup(command_path));
 		}
-		path_token = _strtok(NULL, ":");
+		path_token = strtok(NULL, ":");
 	}
 	free(path_copy);
 	return (NULL);
