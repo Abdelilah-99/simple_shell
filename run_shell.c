@@ -8,7 +8,7 @@ void run_shell(void)
 	char *command = NULL;
 	size_t command_length = 0;
 	ssize_t ch_read;
-	bool is_inter = isatty(STDIN_FILENO);
+	int is_inter = isatty(STDIN_FILENO);
 
 	while (true)
 	{
@@ -23,20 +23,20 @@ void run_shell(void)
 		{
 			if (ch_read == EOF)
 			{
-			break;
+				break;
 			}
-		else
-		{
-		perror("getline");
-exit(EXIT_SUCCESS);
-		}
+			else
+			{
+				perror("getline");
+				exit(EXIT_SUCCESS);
+			}
 		}
 		trim_whitespace(command);
 		if (command[0] == '\0')
 			continue;
 		execute_command(command);
 		if (!is_inter)
-		break;
+			break;
 	}
-		free(command);
+	free(command);
 }
