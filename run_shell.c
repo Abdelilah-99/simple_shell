@@ -12,7 +12,6 @@ void run_shell(void)
 
 	while (1)
 	{
-		free(command);
 		if (is_inter)
 			_puts("$ ");
 		ch_read = getline(&command, &command_length, stdin);
