@@ -15,10 +15,7 @@ char *trvs_path(char *command, char *path)
 
 	command_path[0] = '\0';
 	if (path_copy == NULL)
-	{
-		perror("strdup");
-		exit(EXIT_FAILURE);
-	}
+		perror("strdup"), exit(EXIT_FAILURE);
 	path_token = strtok(path_copy, ":");
 	while (path_token != NULL)
 	{
