@@ -37,5 +37,5 @@ int _atoi(char *s)
 
 void print_exit(void)
 {
-	exit(EXIT_FAILURE);
+	exit(EXIT_SUCCESS);
 }
