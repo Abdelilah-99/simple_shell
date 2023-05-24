@@ -17,15 +17,8 @@ void run_shell(void)
 		ch_read = getline(&command, &command_length, stdin);
 		if (ch_read == -1)
 		{
-			if (ch_read == EOF)
-			{
-				break;
-			}
-			else
-			{
-				perror("getline");
-				exit(EXIT_FAILURE);
-			}
+		free(command);
+		exit(1);
 		}
 		trim_whitespace(command);
 		if (command[0] == '\0')
