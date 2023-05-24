@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
-
+#include <stdbool.h>
 #define BUFFER_SIZE 1024
 #define BUFSIZE 1024
 #define MAX_COMMAND_LENGTH 1024
