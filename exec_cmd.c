@@ -24,10 +24,9 @@ void execute_command(char *command)
 		token = strtok(NULL, " ");
 	}
 	arguments[i] = NULL;
-	if (_strcmp(command, "exit") == 0)
+	if (_strcmp(command[0], "exit") == 0)
 	{
-		free(command);
-		print_exit();
+		adv_exit(command);
 		return;
 	}
 	command_path = find_command_path(arguments[0], _getenv("PATH"));
