@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * run_shell - run tshe shell project
+ * run_shell - rune tshe shell project
  */
 void run_shell(void)
 {
