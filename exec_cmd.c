@@ -6,14 +6,6 @@
  * Return: executiong of the command
  */
 
-#include "shell.h"
-
-/**
- * execute_command - execute a command
- * @command: command from the input
- * Return: executiong of the command
- */
-
 void execute_command(char *command)
 {
 	char *arguments[MAX_ARGUMENTS], *token, *command_path = NULL;
