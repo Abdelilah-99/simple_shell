@@ -29,7 +29,7 @@ char *_strcpy(char *d, const char *s)
 	return (d);
 }
 /**
- * _puts - output a string
+ * _puts - output  string
  * @str: string
  */
 void _puts(char *str)
