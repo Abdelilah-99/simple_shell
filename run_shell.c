@@ -26,13 +26,13 @@ void run_shell(void)
 			}
 		}
 		trim_whitespace(command);
-		if (command[0] == '\0')
-			continue;
 		for (i = 0; command[i]; i++)
 		{
 			if (command[i] == '#')
 				command[i] = '\0';
 		}
+		if (command[0] == '\0')
+			continue;
 		execute_command(command);
 	}
 	free(command);
