@@ -3,7 +3,7 @@
 /**
  * find_command_path - find path of command
  * @command: input
- * @path: path
+ * @path: path of command
  * Return: command in a path
  */
 
