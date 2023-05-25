@@ -6,6 +6,14 @@
  * Return: executiong of the command
  */
 
+#include "shell.h"
+
+/**
+ * execute_command - execute a command
+ * @command: command from the input
+ * Return: executiong of the command
+ */
+
 void execute_command(char *command)
 {
 	char *arguments[MAX_ARGUMENTS], *token, *command_path = NULL;
@@ -24,9 +32,10 @@ void execute_command(char *command)
 		token = strtok(NULL, " ");
 	}
 	arguments[i] = NULL;
-	if (_strcmp(command[0], "exit") == 0)
+	if (_strcmp(command, "exit") == 0)
 	{
-		adv_exit(command);
+		free(command);
+		print_exit();
 		return;
 	}
 	command_path = find_command_path(arguments[0], _getenv("PATH"));
