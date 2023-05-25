@@ -68,7 +68,7 @@ char *_getenv(char *name)
 /**
  * _strlen - length
  * @s: string
- * Return: length
+ * Return: length of st
  */
 int _strlen(char *s)
 {
