@@ -2,9 +2,9 @@
 
 /**
  * find_command_path - find path of command
- * @command: inpsut
- * @path: path
- * Return: command in a path
+ * @command: input commad
+ * @path: path of command
+ * Return: command in path
  */
 
 char *find_command_path(char *command, char *path)

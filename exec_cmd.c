@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * execute_command - execute command
- * @command: commsand from the input
- * Return: executiong of the command if it existe
+ * execute_command - execute a command
+ * @command: command from the input
+ * Return: executiong of the command
  */
 
 void execute_command(char *command)

@@ -11,7 +11,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
- * _strcpy - copy string from source to dest
+ * _strcpy - copy string from a source to dest
  * @s: source
  * @d: dest
  * Return: a pointer to dest
@@ -29,7 +29,7 @@ char *_strcpy(char *d, const char *s)
 	return (d);
 }
 /**
- * _puts - output a string
+ * _puts - output  string
  * @str: string
  */
 void _puts(char *str)
@@ -46,7 +46,7 @@ void _puts(char *str)
 }
 /**
  * _getenv - retrieve value of an env var
- * @name: env var
+ * @name: env vari
  * Return: poinster represente the value of the env var
  */
 char *_getenv(char *name)
@@ -68,7 +68,7 @@ char *_getenv(char *name)
 /**
  * _strlen - length
  * @s: string
- * Return: length
+ * Return: length of st
  */
 int _strlen(char *s)
 {
