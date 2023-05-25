@@ -11,7 +11,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
- * _strcpy - copy string from source to dest
+ * _strcpy - copy string from a source to dest
  * @s: source
  * @d: dest
  * Return: a pointer to dest
