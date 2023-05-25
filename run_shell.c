@@ -18,7 +18,9 @@ void run_shell(void)
 		if (ch_read == -1)
 		{
 			if (ch_read == EOF)
+			{
 				break;
+			}
 			else
 			{
 				perror("getline");
