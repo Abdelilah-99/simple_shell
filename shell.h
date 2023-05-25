@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -33,5 +34,7 @@ int _atoi(char *s);
 char *_strchr(const char *str, int c);
 int _strncmp(char *s1, char *s2, size_t n);
 char *_strtok(char *str, const char *delim);
+int is_number(const char *str);
+int _isdigit(int c);
 
 #endif
