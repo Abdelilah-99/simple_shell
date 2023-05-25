@@ -2,7 +2,7 @@
 
 /**
  * find_command_path - find path of command
- * @command: input command
+ * @command: input commad
  * @path: path of command
  * Return: command in path
  */
