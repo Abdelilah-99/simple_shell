@@ -3,7 +3,7 @@
  * _atoi - str to int
  * @s: str
  * Return: rslt
-*/
+ */
 int _atoi(char *s)
 {
 	int i = 0;
@@ -38,6 +38,39 @@ void print_exit(char *arr[])
 	int i = 0;
 
 	if (arr[1] != NULL)
+	{
+		if (is_number(arr[1]) == 0)
+		{
+			_puts("Error: exit argument must be an integer\n");
+			exit(2);
+		}
 		i = _atoi(arr[1]);
+	}
 	exit(i);
+}
+/**
+ * is_number - check nmbr
+ * @str: str
+ * Return: 0 or 1
+ */
+int is_number(const char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (!_isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+/**
+ * _isdigit - check for digit
+ * @c: whawt we need to check
+ * Return: 0 or nmbre
+ */
+int _isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
 }
