@@ -3,7 +3,7 @@
 /**
  * execute_command - execute a command
  * @command: command from the input
- * Return: executiong of the command
+ * Return: executing of the command
  */
 
 void execute_command(char *command)
