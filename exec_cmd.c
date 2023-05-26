@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * execute_command - execute a commd
+ * execute_command - execute a cmd
  * @command: cmd from the input
  * Return: executing of the command
  */
